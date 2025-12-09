@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Recursive Ball in Polygon</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <h1>Recursive Ball-in-Polygon</h1>
+    <canvas id="scene"></canvas>
+    <div class="controls">
+      <label>Sides: <span id="sidesCount">6</span></label>
+      <label>Depth:
+        <input id="depth" type="range" min="1" max="5" value="3" />
+        <span id="depthVal">3</span>
+      </label>
+      <button id="resetBtn">Reset</button>
+    </div>
+    <p class="hint">When the ball hits the polygon, the polygon gains a side. Inside each ball is the same mini-simulation.</p>
+  </div>
+
+  <!-- split JS into multiple files -->
+  <script src="polygon.js"></script>
+  <script src="ball.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
